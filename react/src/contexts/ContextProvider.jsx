@@ -1,11 +1,16 @@
 import { createContext, useContext, useState } from "react";
 
 const StateContext = createContext({
-  currentUser: null,
+  currentUser: {},
   userToken: null,
   surveys: [],
-  setCurrentUser: () => { },
-  setUserToken: () => { },
+  questionTypes: [],
+  toast: {
+    message: null,
+    show: false,
+  },
+  setCurrentUser: () => {},
+  setUserToken: () => {}
 })
 
 const tmpSurveys = [
