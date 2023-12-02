@@ -256,7 +256,7 @@ class SurveyController extends Controller
 
     public function getBySlug(Survey $survey)
     {
-        if (!$survey->status) {
+        if ($survey->status) {
             return response("", 404);
         }
 
