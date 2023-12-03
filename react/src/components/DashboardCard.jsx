@@ -1,10 +1,10 @@
-export default function Toast() {
+import React from "react";
 
+export default function DashboardCard({title, children, style = '', className = ''}) {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-        Dashboard Card!
-      </h1>
-    </>
+    <div className={'bg-white shadow-md p-3 text-center flex flex-col animate-fade-in-down ' + className} style={style}>
+      {title && <h3 className="text-2xl font-semibold">{title}</h3>}
+      {children}
+    </div>
   );
 }

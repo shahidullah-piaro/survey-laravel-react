@@ -19,18 +19,18 @@ export default function SurveyPublicView() {
       .get(`survey/get-by-slug/${slug}`)
       .then(({ data }) => {
         setLoading(false);
-        console.log(data)
+        //console.log(data)
         setSurvey(data.data);
       })
       .catch(() => {
         setLoading(false);
-        console.log("Data Didn't Found")
+        //console.log("Data Didn't Found")
       });
   }, []);
 
   function answerChanged(question, value) {
     answers[question.id] = value;
-    console.log(question, value);
+    //console.log(question, value);
   }
 
   function onSubmit(ev) {
